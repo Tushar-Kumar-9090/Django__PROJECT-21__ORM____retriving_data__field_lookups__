@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1 style="color: blue">Display_Topics</h1>
+
+        <table border="1px" cellspacing="0" cellpadding="5" width="15%" height="300px" bgcolor="lightpink">
+            <tr>
+                <th>Topic_Name</th>
+            </tr>
+
+        {% for to in topics %}
+            <tr align="center">
+                <td>{{to.topic_name}}</td>
+            </tr>
+        {% endfor %}
+
+        </table>
+    </center>
+
+    <center>
+        <h1 style="color: blue">Display_Webpages</h1>
+
+        <table border="1px" cellspacing="0" cellpadding="5" width="35%" height="400px" bgcolor="lightpink">
+            <tr>
+                <th>Topic_name</th>
+                <th>Name</th>
+                <th>Url</th>
+            </tr>
+
+        {% for wo in webpages %}
+            <tr align="center">
+                <td>{{wo.topic_name}}</td>
+                <td>{{wo.name}}</td>
+                <td>{{wo.url}}</td>
+            </tr>
+        {% endfor %}
+
+        </table>
+    </center>
+
+    <center>
+        <h1 style="color: blue">Display_Access_Records</h1>
+
+        <table border="1px" cellspacing="0" cellpadding="5" width="35%" height="400px" bgcolor="lightpink">
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Author</th>
+            </tr>
+
+        {% for aro in accessrecords %}
+            <tr align="center">
+                <td>{{aro.name}}</td>
+                <td>{{aro.date}}</td>
+                <td>{{aro.author}}</td>
+            </tr>
+        {% endfor %}
+
+        </table>
+    </center>
+</body>
+</html>
